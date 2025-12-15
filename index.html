@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevStream - DevOps Without The Overhead</title>
+    <title>Plateformers - DevOps Without The Overhead</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -876,19 +876,107 @@
                 font-size: 2.5rem;
             }
         }
+    
+        /* Who We Are Section Styles - Matching 'Problem' and 'Hero' theme */
+        .who-section {
+            padding: 8rem 2rem;
+            background: var(--light-gray); /* Matches testimonial bg */
+            position: relative;
+        }
+
+        .who-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .who-card {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .who-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gray-light);
+            transition: background 0.3s ease;
+        }
+
+        .who-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+        }
+
+        /* Interactive hover colors for cards */
+        .who-card:nth-child(1):hover::before { background: var(--primary); }
+        .who-card:nth-child(2):hover::before { background: var(--success); }
+        .who-card:nth-child(3):hover::before { background: var(--accent-warm); }
+
+        .who-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            background: rgba(30, 58, 138, 0.05); /* Tint of primary */
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .who-card:hover .who-icon {
+            background: var(--primary);
+            color: var(--white);
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .who-card:nth-child(2) .who-icon { color: var(--success); background: rgba(16, 185, 129, 0.1); }
+        .who-card:nth-child(2):hover .who-icon { background: var(--success); color: var(--white); }
+
+        .who-card:nth-child(3) .who-icon { color: var(--accent-warm); background: rgba(245, 158, 11, 0.1); }
+        .who-card:nth-child(3):hover .who-icon { background: var(--accent-warm); color: var(--white); }
+
+        .who-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .who-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">DevStream</div>
+        <div class="logo">Plateformers</div>
         <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Services</a></li>
+            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Benefits</a></li>
+            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Pricing</a></li>
+            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Clients</a></li>
         </ul>
-        <a href="#contact" class="cta-button">Book a Call</a>
+        <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="cta-button">Book a Call</a>
     </nav>
 
     <!-- Hero Section -->
@@ -898,8 +986,8 @@
                 <h1>DevOps <span class="highlight">Without</span> The Overhead</h1>
                 <p>Focus on building your product while we handle your infrastructure, deployments, and DevOps workflows. Professional DevOps expertise for small and medium businesses.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="primary-btn">Schedule Free Consultation</a>
-                    <a href="#services" class="secondary-btn">Explore Services</a>
+                    <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Schedule Free Consultation</a>
+                    <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="secondary-btn">Explore Services</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -1030,8 +1118,8 @@
     <section id="benefits" class="benefits">
         <div class="services-container">
             <div class="section-header">
-                <span class="section-tag" style="background: var(--accent);">Why DevStream</span>
-                <h2 style="color: var(--white);">The DevStream Advantage</h2>
+                <span class="section-tag" style="background: var(--accent);">Why Plateformers</span>
+                <h2 style="color: var(--white);">The Plateformers Advantage</h2>
                 <p style="color: rgba(255,255,255,0.8);">What sets us apart from building an in-house team</p>
             </div>
             <div class="benefits-grid">
@@ -1063,6 +1151,52 @@
         </div>
     </section>
 
+    <!-- Who We Are Section -->
+    <section class="who-section" id="who-we-are">
+        <div class="section-header">
+            <span class="section-tag">Our Team</span>
+            <h2>Proven DevOps <span class="highlight">Expertise</span></h2>
+            <p>We are a dedicated team of Senior DevOps Architects with over 5 years of battle-tested experience managing high-scale infrastructure.</p>
+        </div>
+
+        <div class="who-grid">
+            <!-- Card 1 -->
+            <div class="who-card">
+                <div class="who-icon">
+                    <svg style="width: 32px; height: 32px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                </div>
+                <h3>Senior Architects</h3>
+                <p>Not just engineers—architects. We bring 5+ years of experience designing resilient systems that scale with your business growth, ensuring you build on solid foundations.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="who-card">
+                <div class="who-icon">
+                    <svg style="width: 32px; height: 32px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h3>Containers to Cloud</h3>
+                <p>From Docker containers to complex Kubernetes clusters and multi-cloud strategies. We manage the full spectrum of modern infrastructure with precision and security.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="who-card">
+                <div class="who-icon">
+                    <svg style="width: 32px; height: 32px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3>High-Scale Systems</h3>
+                <p>We've optimized infrastructure for millions of users. We identify bottlenecks before they break your system, ensuring 99.9% uptime and lightning-fast performance.</p>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
         <div class="section-header">
@@ -1083,7 +1217,7 @@
                     <li>Email support (24hr response)</li>
                     <li>Monthly health checks</li>
                 </ul>
-                <a href="#contact" class="primary-btn">Get Started</a>
+                <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Get Started</a>
             </div>
             <div class="pricing-card featured">
                 <div class="pricing-badge">Most Popular</div>
@@ -1099,7 +1233,7 @@
                     <li>Weekly optimization reviews</li>
                     <li>Cost optimization strategies</li>
                 </ul>
-                <a href="#contact" class="primary-btn">Get Started</a>
+                <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Get Started</a>
             </div>
             <div class="pricing-card">
                 <h3>Enterprise</h3>
@@ -1114,7 +1248,7 @@
                     <li>Custom SLAs</li>
                     <li>On-site training available</li>
                 </ul>
-                <a href="#contact" class="primary-btn">Contact Sales</a>
+                <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Contact Sales</a>
             </div>
         </div>
     </section>
@@ -1128,7 +1262,7 @@
         </div>
         <div class="testimonial-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text">DevStream took away all the infrastructure headaches. We went from spending 30% of our engineering time on DevOps to basically zero. Our deployment frequency increased 10x.</p>
+                <p class="testimonial-text">Plateformers took away all the infrastructure headaches. We went from spending 30% of our engineering time on DevOps to basically zero. Our deployment frequency increased 10x.</p>
                 <div class="testimonial-author">
                     <div class="author-avatar">SM</div>
                     <div class="author-info">
@@ -1138,7 +1272,7 @@
                 </div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">As a non-technical founder, I needed experts I could trust. DevStream not only handles our infrastructure but educates our team. They're an extension of our company.</p>
+                <p class="testimonial-text">As a non-technical founder, I needed experts I could trust. Plateformers not only handles our infrastructure but educates our team. They're an extension of our company.</p>
                 <div class="testimonial-author">
                     <div class="author-avatar">JC</div>
                     <div class="author-info">
@@ -1165,7 +1299,7 @@
         <div class="final-cta-content">
             <h2>Ready to Transform Your DevOps?</h2>
             <p>Schedule a free 30-minute consultation to discuss your infrastructure challenges and see how we can help.</p>
-            <a href="/cdn-cgi/l/email-protection#2048454c4c4f60434c4f5544464f5247450e494f" class="primary-btn">Book Your Free Consultation</a>
+            <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Book Your Free Consultation</a>
         </div>
     </section>
 
@@ -1173,7 +1307,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="footer-logo">DevStream</span>
+                <span class="footer-logo">Plateformers</span>
                 <p>Professional DevOps-as-a-Service for small and medium businesses. Focus on your product, we'll handle the infrastructure.</p>
             </div>
             <div class="footer-section">
@@ -1204,7 +1338,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 DevStream. All rights reserved. | DevOps-as-a-Service for Modern Teams</p>
+            <p>&copy; 2025 Plateformers. All rights reserved. | DevOps-as-a-Service for Modern Teams</p>
         </div>
     </footer>
 
@@ -1255,4 +1389,4 @@
         }, observerOptions);
 
         // Observe all cards for animation
-        document.querySelectorAll('.problem-card, .service-ca
+        document.querySelectorAll('.problem-card, .service-ca')
