@@ -877,13 +877,12 @@
             }
         }
     
-        /* Who We Are Section Styles - Matching 'Problem' and 'Hero' theme */
+        /* Who We Are Section Styles */
         .who-section {
             padding: 8rem 2rem;
-            background: var(--light-gray); /* Matches testimonial bg */
+            background: var(--light-gray);
             position: relative;
         }
-
         .who-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -891,7 +890,6 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
         }
-
         .who-card {
             background: var(--white);
             padding: 3rem 2.5rem;
@@ -902,7 +900,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .who-card::before {
             content: '';
             position: absolute;
@@ -913,17 +910,13 @@
             background: var(--gray-light);
             transition: background 0.3s ease;
         }
-
         .who-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
         }
-
-        /* Interactive hover colors for cards */
         .who-card:nth-child(1):hover::before { background: var(--primary); }
         .who-card:nth-child(2):hover::before { background: var(--success); }
         .who-card:nth-child(3):hover::before { background: var(--accent-warm); }
-
         .who-icon {
             width: 64px;
             height: 64px;
@@ -932,23 +925,19 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 2rem;
-            background: rgba(30, 58, 138, 0.05); /* Tint of primary */
+            background: rgba(30, 58, 138, 0.05);
             color: var(--primary);
             transition: all 0.3s ease;
         }
-
         .who-card:hover .who-icon {
             background: var(--primary);
             color: var(--white);
             transform: scale(1.1) rotate(-5deg);
         }
-
         .who-card:nth-child(2) .who-icon { color: var(--success); background: rgba(16, 185, 129, 0.1); }
         .who-card:nth-child(2):hover .who-icon { background: var(--success); color: var(--white); }
-
         .who-card:nth-child(3) .who-icon { color: var(--accent-warm); background: rgba(245, 158, 11, 0.1); }
         .who-card:nth-child(3):hover .who-icon { background: var(--accent-warm); color: var(--white); }
-
         .who-card h3 {
             font-size: 1.5rem;
             font-weight: 700;
@@ -956,7 +945,6 @@
             margin-bottom: 1rem;
             font-family: 'DM Sans', sans-serif;
         }
-
         .who-card p {
             color: var(--gray);
             line-height: 1.7;
@@ -971,10 +959,11 @@
     <nav>
         <div class="logo">Plateformers</div>
         <ul class="nav-links">
-            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Services</a></li>
-            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Benefits</a></li>
-            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Pricing</a></li>
-            <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Clients</a></li>
+            <li><a href="#who-we-are">Our Team</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Clients</a></li>
         </ul>
         <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="cta-button">Book a Call</a>
     </nav>
@@ -987,7 +976,7 @@
                 <p>Focus on building your product while we handle your infrastructure, deployments, and DevOps workflows. Professional DevOps expertise for small and medium businesses.</p>
                 <div class="hero-buttons">
                     <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Schedule Free Consultation</a>
-                    <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="secondary-btn">Explore Services</a>
+                    <a href="#services" class="secondary-btn">Explore Services</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -1156,11 +1145,9 @@
         <div class="section-header">
             <span class="section-tag">Our Team</span>
             <h2>Proven DevOps <span class="highlight">Expertise</span></h2>
-            <p>We are a dedicated team of Senior DevOps Architects with over 5 years of battle-tested experience managing high-scale infrastructure.</p>
+            <p>We are a dedicated team of Senior DevOps Architects with extensive battle-tested experience managing high-scale infrastructure.</p>
         </div>
-
         <div class="who-grid">
-            <!-- Card 1 -->
             <div class="who-card">
                 <div class="who-icon">
                     <svg style="width: 32px; height: 32px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1168,10 +1155,8 @@
                     </svg>
                 </div>
                 <h3>Senior Architects</h3>
-                <p>Not just engineers—architects. We bring 5+ years of experience designing resilient systems that scale with your business growth, ensuring you build on solid foundations.</p>
+                <p>Not just engineers—architects. We bring deep architectural experience designing resilient systems that scale with your business growth, ensuring you build on solid foundations.</p>
             </div>
-
-            <!-- Card 2 -->
             <div class="who-card">
                 <div class="who-icon">
                     <svg style="width: 32px; height: 32px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1181,8 +1166,6 @@
                 <h3>Containers to Cloud</h3>
                 <p>From Docker containers to complex Kubernetes clusters and multi-cloud strategies. We manage the full spectrum of modern infrastructure with precision and security.</p>
             </div>
-
-            <!-- Card 3 -->
             <div class="who-card">
                 <div class="who-icon">
                     <svg style="width: 32px; height: 32px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1217,7 +1200,7 @@
                     <li>Email support (24hr response)</li>
                     <li>Monthly health checks</li>
                 </ul>
-                <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Get Started</a>
+                <a href="#contact" class="primary-btn">Get Started</a>
             </div>
             <div class="pricing-card featured">
                 <div class="pricing-badge">Most Popular</div>
@@ -1233,7 +1216,7 @@
                     <li>Weekly optimization reviews</li>
                     <li>Cost optimization strategies</li>
                 </ul>
-                <a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank" class="primary-btn">Get Started</a>
+                <a href="#contact" class="primary-btn">Get Started</a>
             </div>
             <div class="pricing-card">
                 <h3>Enterprise</h3>
@@ -1333,7 +1316,7 @@
                 <ul class="footer-links">
                     <li><a href="/cdn-cgi/l/email-protection#b4dcd1d8d8dbf4d7d8dbc1d0d2dbc6d3d19adddb"><span class="__cf_email__" data-cfemail="8de5e8e1e1e2cdeee1e2f8e9ebe2ffeae8a3e4e2">[email&#160;protected]</span></a></li>
                     <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                    <li><a href="#contact">Schedule a Call</a></li>
+                    <li><a href="https://calendar.google.com/calendar/u/0/r/appointment" target="_blank">Schedule a Call</a></li>
                 </ul>
             </div>
         </div>
@@ -1389,4 +1372,4 @@
         }, observerOptions);
 
         // Observe all cards for animation
-        document.querySelectorAll('.problem-card, .service-ca')
+        document.querySelectorAll('.problem-card, .service-ca
